@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="node_modules/bxslider/dist/jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Black Template</title>
 </head>
@@ -11,84 +12,186 @@
 <body>
 
     <div class="container-fluid bg-secondary p-0">
-        <div class="row no-gutters">
+        <div class="row no-gutters flex-row">
             <!-- ROW HEADER  -->
             <div class="col ">
-                <header class="text-center d-flex justify-content-between">
-                    <div class="row">
-                        <div class="col-10 ">
-                            <a href="#">
-                                <img class="col-4" src="IMG/logo03.pdf" alt="logo">
-                                <h1 class="col-4 d-inline-block w-50 ">TITRE</h1></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <nav class=" navbar navbar-expand-lg navbar-dark bg-dark ">
-                                <!-- <a class="navbar-brand .d-none .d-md-block" href="#">Navbar</a> -->
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <header class="text-center d-flex justify-content-between align-items-center">
+
+
+                    <a href="#">
+                                <img class="ml-2" src="https://picsum.photos/65" alt="logo"></a>
+                    <a href="#"><h1 class="text-danger">Black Template</h1></a>
+
+
+
+
+                    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark ">
+                        <!-- <a class="navbar-brand .d-none .d-md-block" href="#">Navbar</a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Link</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
                         </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
 
+                        </div>
+                    </nav>
+            </div>
+        </div>
+        <div class="col d-flex flex-row  justify-content-center ">
+            <input type="text" name="search" value="" id="searchBar" >
+            <button type="submit" class="ml-1" name="button">Search</button>
+        </div>
+        </header>
+    </div>
+
+
+    </div>
+    <div class="row text-center ">
+
+        <!--  ROW MAIN  -->
+        <div class="col ">
+            <h2 class="mt-4">Presentation</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col">
+            <h3 class="mt-4">Notre Selection</h3>
+            <ul class="bxslider">
+                <li>
+                    <div class="row">
+                        <div class="col-6">
+
+                    <article class="p-0">
+                        <div class="card">
+                            <h5 class="card-title">Article01</h5>
+                            <img class="card-img-top m-auto mw-50" src="https://picsum.photos/200/300/?random" alt="pic">
+                            <div class="card-body p-0">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisi co</p>
+                                <p>Prix 18599$</p>
+                                <button type="button" name="button"> Add Cards</button>
+                            </div>
+                        </div>
+                    </article>
+                        </div>
+                        <div class="col-6">
+                            <article class="p-0">
+                                <div class="card">
+                                    <h5 class="card-title">Article01</h5>
+                                    <img class="card-img-top m-auto mw-50" src="https://picsum.photos/200/300/?random" alt="pic">
+                                    <div class="card-body p-0">
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisi co</p>
+                                        <p>Prix 18599$</p>
+                                        <button type="button" name="button"> Add Cards</button>
+                                    </div>
                                 </div>
-                            </nav>
+                            </article>
                         </div>
                     </div>
-                </header>
-                <div class="row d-block">
-                    <div class="col-12 m-auto">
-                        <input type="text" name="search" value=""class="d-inline-block pr-10">
-                        <button type="submit" name="button">Search</button>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-6">
+
+                    <article class="p-0">
+                        <div class="card">
+                            <h5 class="card-title">Article01</h5>
+                            <img class="card-img-top m-auto mw-50" src="https://picsum.photos/200/300/?random" alt="pic">
+                            <div class="card-body p-0">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisi co</p>
+                                <p>Prix 18599$</p>
+                                <button type="button" name="button"> Add Cards</button>
+                            </div>
+                        </div>
+                    </article>
+                        </div>
+                        <div class="col-6">
+                            <article class="p-0">
+                                <div class="card">
+                                    <h5 class="card-title">Article01</h5>
+                                    <img class="card-img-top m-auto mw-50" src="https://picsum.photos/200/300/?random" alt="pic">
+                                    <div class="card-body p-0">
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisi co</p>
+                                        <p>Prix 18599$</p>
+                                        <button type="button" name="button"> Add Cards</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-6">
 
-            </div>
+                    <article class="p-0">
+                        <div class="card">
+                            <h5 class="card-title">Article01</h5>
+                            <img class="card-img-top m-auto mw-50" src="https://picsum.photos/200/300/?random" alt="pic">
+                            <div class="card-body p-0">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisi co</p>
+                                <p>Prix 18599$</p>
+                                <button type="button" name="button"> Add Cards</button>
+                            </div>
+                        </div>
+                    </article>
+                        </div>
+                        <div class="col-6">
+                            <article class="p-0">
+                                <div class="card">
+                                    <h5 class="card-title">Article01</h5>
+                                    <img class="card-img-top m-auto mw-50" src="https://picsum.photos/200/300/?random" alt="pic">
+                                    <div class="card-body p-0">
 
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisi co</p>
+                                        <p>Prix 18599$</p>
+                                        <button type="button" name="button"> Add Cards</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
         </div>
-        <div class="row">
-            <!--  ROW MAIN  -->
-            <div class="col-8">
-
-            </div>
-            <div class="col-4">
-
-            </div>
-        </div>
-        <div class="row">
-            <!-- ROW FOOTER  -->
-            <div class="col">
-                <footer>
-
-
-
-
-
-                </footer>
-            </div>
+        <div class="col-8">
 
         </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+    <div class="row">
+        <!-- ROW FOOTER  -->
+        <div class="col">
+            <footer class="bg-secondary text-center">
+
+                <p>wevghrinvhie &copy; fweunugbfwvei</p>
+
+
+
+            </footer>
+        </div>
+
+    </div>
     </div>
     </div>
 
@@ -103,6 +206,9 @@
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/bxslider/dist/jquery.bxslider.min.js">
+
+    </script>
 
     <script src="script/script.js"></script>
 </body>
