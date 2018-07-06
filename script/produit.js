@@ -1,31 +1,36 @@
 $(document).ready(function() {
 
-    var GET_PARAM = function(name) {
-        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
-    };
+        var GET_PARAM = function(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        };
 
-var i = GET_PARAM("produit_id")
+    var i = GET_PARAM('product_id');
+    var myProduct = catalog[i];
+
+
+    console.log(i);
+
 
 
     var html = '<div class="col-12">\
-    <h4>' + catalog[i].name+'<h4>\
+    <h4>' +myProduct.name+'<h4>\
     <ul class="bxslider">\
     <li>\
-    <img class="card-img-top m-auto mw-50"  src="' + catalog[i].pictures[0] + '" alt="'+ [i] +'">\
+    <img class="card-img-top m-auto mw-50"  src="' +myProduct.pictures[0] + '" alt="'+ [i] +'">\
     </li>\
     <li>\
-    <img class="card-img-top m-auto mw-50"  src="' + catalog[i].pictures[1] + '" alt="'+ [i] +'">\
+    <img class="card-img-top m-auto mw-50"  src="' +myProduct.pictures[1] + '" alt="'+ [i] +'">\
     </li>\
     <li>\
-    <img class="card-img-top m-auto mw-50" src="' + catalog[i].pictures[2] + '" alt="'+ [i] +'">\
+    <img class="card-img-top m-auto mw-50" src="' +myProduct.pictures[2] + '" alt="'+ [i] +'">\
     </li>\
     </ul>\
     </div>\
     <div class="col-12">\
     <section>\
-    <p>' + catalog[i].price + '€</p>\
+    <p>' +myProduct.price + '€</p>\
     <h4>Description</h4>\
-    <p>' + catalog[i].description +'</p>\
+    <p>' +myProduct.description +'</p>\
     </section>\
     <button type="button" name="button">Acheter</button>\
     </div>\
