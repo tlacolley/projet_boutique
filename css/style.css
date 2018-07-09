@@ -19,8 +19,14 @@ article img{
 }
 .bx-wrapper img {
 
-    max-width: 90%;
+    max-width: 50%;
     margin-top: 5px;
 
+
+}
+
+.card-title{
+
+text-align: center;
 
 }

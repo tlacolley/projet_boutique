@@ -8,7 +8,6 @@ $(document).ready(function() {
     var myProduct = catalog[i];
 
 
-    console.log(i);
 
 
 
