@@ -30,3 +30,16 @@ article img{
 text-align: center;
 
 }
+
+.panierQte{
+
+margin-bottom: 15%;
+
+
+}
+
+.panierQte select{
+
+
+    width: 60px;
+}

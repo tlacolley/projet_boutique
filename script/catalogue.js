@@ -41,9 +41,10 @@ for (var i = 0; i < catalog.length; i++) {
 
         }
 
+
+
         loadPanier();
         console.log(panier);
-
         $(".btn_add").click(function(){
             productId = $(this).val()
             if(panier[productId]){

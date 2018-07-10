@@ -152,9 +152,4 @@ var selection = [catalog[42],catalog[69],catalog[51],catalog[27],catalog[31],cat
 
 
 
-
-
-
-
-
 });
