@@ -40,70 +40,88 @@ $(document).ready(function() {
     //
     //         $("#panier").append(html)
     //             }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-// <div class="row">
-//     <div class="col">
-//         <h4>Récap</h4>
-//         <ul>
-//             <li>Article</li>
-//             <li>Article</li>
-//             <li>Article</li>
-//         </ul>
-//         <p>total :</p>
-//         <button type="button" name="button">Valider</button>
-//     </div>
-// </div>
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // <div class="row">
+    //     <div class="col">
+    //         <h4>Récap</h4>
+    //         <ul>
+    //             <li>Article</li>
+    //             <li>Article</li>
+    //             <li>Article</li>
+    //         </ul>
+    //         <p>total :</p>
+    //         <button type="button" name="button">Valider</button>
+    //     </div>
+    // </div>
 
 
 
-    function savePanier(){
+    function savePanier() {
         var panier_json = JSON.stringify(panier);
-        sessionStorage.setItem("panier",panier_json);
+        sessionStorage.setItem("panier", panier_json);
 
     }
 
-    function loadPanier(){
+    function loadPanier() {
         var panier_json = sessionStorage.getItem("panier");
         panier = JSON.parse(panier_json) || {};
     }
 
 
-    function displayCart(){
+    function displayCart() {
         $("#panierUl").html("")
         var total = $("<p class='total'>")
         var addPrice = 0
-        for(productId in panier){
-        $("#panierUl").append($(`<li>${catalog[productId].name} x ${panier[productId]} --------- ${catalog[productId].price}€ x ${panier[productId]} = ${catalog[productId].price*panier[productId]}€ </li>`))
+        for (productId in panier) {
+            $("#panierUl").append($(`
+                <li>${catalog[productId].name} x<button type="button" id="btnMore_${productId}"  value="${productId}" class="btn_add">+
+                </button> ${panier[productId]}
+                <button type="button" class="btn_less"  value="${productId}"  id="btnLess_${productId}">-</button> --------- ${catalog[productId].price}€ x ${panier[productId]} = ${catalog[productId].price*panier[productId]}€ </li>`))
 
-        addPrice += catalog[productId].price*panier[productId]
+            addPrice += catalog[productId].price * panier[productId]
 
+
+            // $('#btnMore_'+productId+).click(function () {
+            //     console.log("plop");
+            // });
 
         }
-
         $(".quezac").append(total.html(addPrice))
+        addClick()
+        remClick()
 
     }
 
-
     loadPanier();
+
     console.log(panier);
     displayCart()
-    $(".btn_add").click(function(){
+    function addClick(){
+        $(".btn_add").click(function() {
         productId = $(this).val()
-        if(panier[productId]){
+        if (panier[productId]) {
             panier[productId]++
-        }
-        else{
+                console.log(panier);
+        } else {
             panier[productId] = 1
         }
         savePanier();
-        displayCart()
         console.log(panier);
+        displayCart()
+    })}
 
 
-    })
+    function remClick(){
+        $(".btn_less").click(function() {
+        productId = $(this).val()
+        if (panier[productId]) {
+            panier[productId] -= 1
+                console.log(panier);
+        }
 
-
+        savePanier();
+        displayCart()
+    })}
 
 
 

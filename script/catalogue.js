@@ -36,7 +36,7 @@ for (var i = 0; i < catalog.length; i++) {
         }
         function loadPanier(){
             var panier_json = sessionStorage.getItem("panier");
-            panier = JSON.parse(panier_json);
+            panier = JSON.parse(panier_json) || {};
 
 
         }
