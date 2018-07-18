@@ -86,7 +86,7 @@ $(document).ready(function() {
             // });
 
         }
-        $(".quezac").append(total.html(addPrice))
+        $(".article").append(total.html(addPrice))
         addClick()
         remClick()
 
